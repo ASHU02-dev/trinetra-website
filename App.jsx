@@ -655,21 +655,29 @@ export default function App() {
         @keyframes floatBounce{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
         @keyframes hideLoader{0%{opacity:1}80%{opacity:1}100%{opacity:0;visibility:hidden}}
 
-        @media(max-width:768px){
-          .navbar{padding:20px;flex-direction:column;gap:15px;text-align:center;}
-          .nav-right{justify-content:center;}
-          .main-title{font-size:58px;}
-          .hero-text{font-size:18px;}
-          .section-title{font-size:36px;}
-          .final-section h2{font-size:42px;}
-          .orb-container{width:180px;height:180px;}
-          .energy-orb{width:80px;height:80px;font-size:28px;}
-          .ring1{width:130px;height:130px;}
-          .ring2{width:170px;height:170px;}
-          .ring3{width:210px;height:210px;}
-          .booking-popup{display:none;}
-          .section{padding:70px 15px;}
-        }
+     @media(max-width:768px){
+  .navbar{padding:20px;flex-direction:column;gap:15px;text-align:center;}
+  .nav-right{justify-content:center;}
+  .main-title{font-size:72px;}
+  .hero-text{font-size:20px;}
+  .small-heading{font-size:14px;letter-spacing:4px;}
+  .section-title{font-size:46px;}
+  .final-section h2{font-size:52px;}
+  .final-section p{font-size:18px;}
+  .card h3,.price-card h3{font-size:28px;}
+  .card p,.price-card p,.review-card p,.why-card p{font-size:17px;}
+  .price-card h3{font-size:62px;}
+  .why-card h3{font-size:24px;}
+  .logo{font-size:38px;}
+  .lang-btn,.insta-btn{font-size:15px;padding:10px 16px;}
+  .orb-container{width:180px;height:180px;}
+  .energy-orb{width:80px;height:80px;font-size:28px;}
+  .ring1{width:130px;height:130px;}
+  .ring2{width:170px;height:170px;}
+  .ring3{width:210px;height:210px;}
+  .booking-popup{display:none;}
+  .section{padding:70px 15px;}
+}
       `}</style>
     </div>
   );
