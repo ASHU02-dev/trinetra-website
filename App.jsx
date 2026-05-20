@@ -411,7 +411,7 @@ export default function App() {
           <p className="tagline">{c.tagline}</p>
         </div>
         <div className="nav-right">
-          <a href="https://instagram.com/trinetra" target="_blank" rel="noreferrer" className="insta-btn">
+          <a href="https://instagram.com/__triinetra__" target="_blank" rel="noreferrer" className="insta-btn">
             📸 {c.navInsta}
           </a>
           <button className={`lang-btn ${lang === "en" ? "lang-active" : ""}`} onClick={() => setLang("en")}>EN</button>
@@ -512,7 +512,7 @@ export default function App() {
         <div className="reviews-slider">
           {c.reviews.map((review, i) => (
             <div key={i} className="review-card">
-              <div className="stars-row">★★★★★</div>
+              <div className="stars-row">★★★★</div>
               <p>{review}</p>
             </div>
           ))}
