@@ -1,0 +1,394 @@
+/* =========================================================
+   TRINETRA — ROYAL BESPOKE VEDIC SANCTUARY DESIGN SYSTEM
+   Supports Dual Luxury Themes:
+   1. [data-theme="midnight"]  -> Deep Celestial Sapphire & Pure Imperial Gold
+   2. [data-theme="ivory"]     -> Royal Classical Alabaster Parchment & Antique Gold
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root, [data-theme="midnight"] {
+  --bg-primary: #050811;
+  --bg-secondary: #0A0F1E;
+  --bg-card: rgba(13, 19, 34, 0.88);
+  --bg-card-hover: rgba(18, 26, 46, 0.96);
+  --bg-input: rgba(8, 12, 22, 0.95);
+  
+  --gold-primary: #D4AF37;
+  --gold-light: #F6E7B8;
+  --gold-dark: #967425;
+  --gold-border: rgba(212, 175, 55, 0.28);
+  --gold-glow: rgba(212, 175, 55, 0.15);
+  --gold-subtle: rgba(212, 175, 55, 0.08);
+
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.72);
+  --text-subtle: rgba(255, 255, 255, 0.45);
+  --border-line: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(212, 175, 55, 0.22);
+  
+  --nav-bg: rgba(5, 8, 17, 0.94);
+  --modal-bg: #0A0F1E;
+  --chart-line: #D4AF37;
+  --chart-fill: rgba(212, 175, 55, 0.03);
+}
+
+[data-theme="ivory"] {
+  --bg-primary: #F9F6F0;
+  --bg-secondary: #EFE9DD;
+  --bg-card: rgba(255, 255, 255, 0.92);
+  --bg-card-hover: #FFFFFF;
+  --bg-input: #FFFFFF;
+  
+  --gold-primary: #9C782B;
+  --gold-light: #5A4310;
+  --gold-dark: #7A5B1C;
+  --gold-border: rgba(156, 120, 43, 0.35);
+  --gold-glow: rgba(156, 120, 43, 0.12);
+  --gold-subtle: rgba(156, 120, 43, 0.08);
+
+  --text-primary: #18140E;
+  --text-secondary: #4A4235;
+  --text-subtle: #7A7060;
+  --border-line: rgba(0, 0, 0, 0.08);
+  --border-card: rgba(156, 120, 43, 0.25);
+  
+  --nav-bg: rgba(249, 246, 240, 0.95);
+  --modal-bg: #FFFFFF;
+  --chart-line: #8C6A24;
+  --chart-fill: rgba(156, 120, 43, 0.04);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark light;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.65;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  background-image: 
+    radial-gradient(circle at 50% 0%, var(--gold-subtle) 0%, transparent 55%),
+    radial-gradient(circle at 100% 60%, rgba(21, 31, 56, 0.12) 0%, transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-primary);
+}
+
+/* Typography */
+h1, h2, h3, h4, .font-serif {
+  font-family: 'Cinzel', Georgia, serif;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+}
+
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, var(--gold-light) 40%, var(--gold-primary) 80%, var(--gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="ivory"] .text-gold-gradient {
+  background: linear-gradient(135deg, #18140E 0%, var(--gold-primary) 60%, var(--gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Luxury Editorial Badge */
+.badge-editorial {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  background: var(--gold-subtle);
+  border: 1px solid var(--gold-border);
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+}
+
+/* Luxury Buttons */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #DFBF7A 0%, #C8A55B 50%, #9A7A38 100%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #080A0F;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 20px var(--gold-glow);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px var(--gold-glow);
+  filter: brightness(1.06);
+}
+
+.btn-obsidian {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  color: var(--text-primary);
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(14px);
+}
+.btn-obsidian:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+/* Luxury Glass Card */
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 18px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="ivory"] .glass-card {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+  opacity: 0.45;
+}
+
+.glass-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--gold-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5), 0 0 25px var(--gold-glow);
+}
+
+/* Inputs & Form */
+.input-bespoke {
+  width: 100%;
+  padding: 13px 16px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-line);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: all 0.25s ease;
+}
+.input-bespoke:focus {
+  outline: none;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 16px var(--gold-glow);
+}
+
+select.input-bespoke option {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 50px;
+}
+.section-header h2 {
+  font-size: 36px;
+  margin: 12px 0 14px;
+  line-height: 1.25;
+}
+.section-header p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .section-header h2 { font-size: 27px; }
+  .section-header p { font-size: 14px; }
+}
+
+/* Vedic Diamond Chart SVG Styles */
+.kundli-chart-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.kundli-svg {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  filter: drop-shadow(0 0 20px var(--gold-glow));
+}
+
+.kundli-line {
+  stroke: var(--chart-line);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+
+.house-num {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  fill: var(--gold-primary);
+  font-weight: 700;
+}
+
+.planet-lbl {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  fill: var(--text-primary);
+}
+
+.planet-lbl.lagna {
+  fill: var(--gold-light);
+}
+
+/* Modal styling */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 5, 10, 0.88);
+  backdrop-filter: blur(16px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: var(--modal-bg);
+  border: 1px solid var(--gold-border);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 580px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 36px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px var(--gold-glow);
+  position: relative;
+}
+
+/* Floating WhatsApp & Sticky Mobile Bar */
+.whatsapp-floating {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 990;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+  color: #FFFFFF;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+  transition: all 0.25s ease;
+}
+.whatsapp-floating:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(37, 211, 102, 0.6);
+}
+
+.mobile-bottom-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-floating {
+    bottom: 85px;
+    right: 16px;
+    padding: 12px;
+  }
+  .whatsapp-floating span {
+    display: none;
+  }
+  .mobile-bottom-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--nav-bg);
+    border-top: 1px solid var(--gold-border);
+    padding: 10px 16px;
+    gap: 10px;
+    z-index: 999;
+    backdrop-filter: blur(16px);
+  }
+}
