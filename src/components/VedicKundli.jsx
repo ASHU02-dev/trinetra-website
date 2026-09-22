@@ -7,11 +7,11 @@ const RASHI_NAMES_EN = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "
 
 export default function VedicKundli({ lang, onBookWithKundli }) {
   const [formData, setFormData] = useState({
-    name: 'Ashu',
+    name: '',
     gender: 'male',
-    dob: '1998-10-15',
-    tob: '10:30',
-    place: 'New Delhi'
+    dob: '',
+    tob: '',
+    place: ''
   });
 
   const [loading, setLoading] = useState(false);
@@ -239,6 +239,7 @@ export default function VedicKundli({ lang, onBookWithKundli }) {
                 <input 
                   type="text" 
                   name="name" 
+                  placeholder={lang === 'hi' ? 'उदा. राहुल शर्मा' : 'e.g. Rahul Sharma'}
                   value={formData.name} 
                   onChange={handleChange}
                   className="input-bespoke"
@@ -294,6 +295,7 @@ export default function VedicKundli({ lang, onBookWithKundli }) {
                   <input 
                     type="text" 
                     name="place" 
+                    placeholder={lang === 'hi' ? 'उदा. नई दिल्ली, मुंबई, जयपुर' : 'e.g. New Delhi, Mumbai, London'}
                     value={formData.place} 
                     onChange={handleChange}
                     className="input-bespoke"

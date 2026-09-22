@@ -24,9 +24,10 @@ export default function Navbar({
   }, []);
 
   const navItems = [
-    { id: 'services', label: content.nav.services, href: '#services' },
+    { id: 'devbhoomi', label: lang === 'hi' ? 'सिद्ध पीठ' : 'Sanctuary', href: '#devbhoomi' },
     { id: 'kundli', label: content.nav.kundli, href: '#kundli' },
     { id: 'milan', label: content.nav.milan, href: '#milan' },
+    { id: 'services', label: content.nav.services, href: '#services' },
     { id: 'horoscope', label: content.nav.horoscope, href: '#horoscope' },
     { id: 'pricing', label: content.nav.pricing, href: '#pricing' },
     { id: 'reviews', label: content.nav.reviews, href: '#reviews' },
@@ -83,7 +84,7 @@ export default function Navbar({
         </a>
 
         {/* Desktop Links */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '26px' }} className="desktop-nav">
+        <div className="desktop-nav">
           {navItems.map((item) => (
             <a
               key={item.id}
@@ -106,7 +107,7 @@ export default function Navbar({
         </div>
 
         {/* Action Bar */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           
           {/* Theme Toggle (Midnight Sapphire / Classical Ivory) */}
           <button
@@ -115,7 +116,7 @@ export default function Navbar({
               background: 'var(--gold-subtle)',
               border: '1px solid var(--gold-border)',
               color: 'var(--gold-primary)',
-              padding: '7px 12px',
+              padding: '7px 10px',
               borderRadius: '8px',
               fontSize: '12px',
               fontWeight: 700,
@@ -127,9 +128,9 @@ export default function Navbar({
             }}
             title={theme === 'midnight' ? "Switch to Classical Ivory Theme" : "Switch to Midnight Sapphire Theme"}
           >
-            {theme === 'midnight' ? <Sun size={14} /> : <Moon size={14} />}
-            <span style={{ fontSize: '11px', display: 'inline-block' }}>
-              {theme === 'midnight' ? 'Ivory Theme' : 'Midnight Theme'}
+            {theme === 'midnight' ? <Sun size={15} /> : <Moon size={15} />}
+            <span className="theme-toggle-text" style={{ fontSize: '11px' }}>
+              {theme === 'midnight' ? 'Ivory Theme' : 'Midnight'}
             </span>
           </button>
 
@@ -142,7 +143,7 @@ export default function Navbar({
                 background: 'var(--bg-input)',
                 border: '1px solid var(--border-line)',
                 color: 'var(--gold-primary)',
-                padding: '6px 10px',
+                padding: '6px 8px',
                 borderRadius: '8px',
                 fontSize: '12px',
                 fontWeight: 600,
@@ -165,43 +166,46 @@ export default function Navbar({
               background: 'var(--gold-subtle)',
               border: '1px solid var(--gold-border)',
               color: 'var(--gold-primary)',
-              padding: '6px 12px',
+              padding: '6px 10px',
               borderRadius: '8px',
               fontSize: '12px',
               fontWeight: 700,
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
-              gap: '6px'
+              gap: '4px'
             }}
           >
             <Globe size={13} />
-            {lang === 'en' ? 'हिंदी' : 'EN'}
+            <span>{lang === 'en' ? 'हिंदी' : 'EN'}</span>
           </button>
 
-          {/* Book Session CTA */}
+          {/* Book Session CTA (Desktop only) */}
           <button 
             onClick={onBookClick}
-            className="btn-gold" 
-            style={{ padding: '10px 22px', fontSize: '12px' }}
+            className="btn-gold desktop-cta-btn" 
+            style={{ padding: '8px 18px', fontSize: '12px' }}
           >
             <span>{content.nav.bookBtn}</span>
           </button>
 
-          {/* Mobile Menu */}
+          {/* Mobile Hamburger Menu */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             style={{
               display: 'none',
-              background: 'transparent',
-              border: 'none',
-              color: 'var(--text-primary)',
+              background: 'var(--gold-subtle)',
+              border: '1px solid var(--gold-border)',
+              color: 'var(--gold-primary)',
               cursor: 'pointer',
-              padding: '6px'
+              padding: '6px',
+              borderRadius: '8px',
+              alignItems: 'center',
+              justifyContent: 'center'
             }}
             className="mobile-hamburger-btn"
           >
-            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
 
         </div>
@@ -245,13 +249,6 @@ export default function Navbar({
           </button>
         </div>
       )}
-
-      <style>{`
-        @media (max-width: 980px) {
-          .desktop-nav { display: none !important; }
-          .mobile-hamburger-btn { display: block !important; }
-        }
-      `}</style>
     </nav>
   );
 }

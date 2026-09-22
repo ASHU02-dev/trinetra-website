@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import DevbhoomiSanctuary from './components/DevbhoomiSanctuary';
 import Services from './components/Services';
 import VedicKundli from './components/VedicKundli';
 import KundliMilan from './components/KundliMilan';
@@ -58,6 +59,12 @@ export default function App() {
       <Hero
         content={content}
         onBookClick={() => handleOpenBooking(PLANS_DATA[1])}
+      />
+
+      {/* Devbhoomi Siddha Sanctorum (Maa Dhari Devi & Bhagwan Kaal Bhairav) */}
+      <DevbhoomiSanctuary
+        lang={lang}
+        onBookWithDeity={(deityTopic) => handleOpenBooking(PLANS_DATA[1], { title: deityTopic, desc: 'Dedicated sanctum prayer & guidance' })}
       />
 
       {/* Core Services */}

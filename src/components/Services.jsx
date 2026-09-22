@@ -81,7 +81,7 @@ export default function Services({ content, onSelectService }) {
                   className="font-serif"
                   style={{
                     fontSize: '20px',
-                    color: '#FFFFFF',
+                    color: 'var(--text-primary)',
                     marginBottom: '12px',
                     lineHeight: 1.3
                   }}
@@ -91,7 +91,7 @@ export default function Services({ content, onSelectService }) {
 
                 <p 
                   style={{
-                    color: 'var(--text-muted)',
+                    color: 'var(--text-secondary)',
                     fontSize: '14px',
                     lineHeight: 1.7,
                     marginBottom: '26px'

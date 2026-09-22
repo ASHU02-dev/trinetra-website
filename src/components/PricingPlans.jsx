@@ -123,11 +123,11 @@ export default function PricingPlans({ lang, currency, setCurrency, onSelectPlan
                     {plan.badge}
                   </div>
 
-                  <h3 className="font-serif" style={{ fontSize: '22px', marginBottom: '6px', color: '#FFF' }}>
+                  <h3 className="font-serif" style={{ fontSize: '22px', marginBottom: '6px', color: 'var(--text-primary)' }}>
                     {lang === 'hi' ? plan.title.hi : plan.title.en}
                   </h3>
 
-                  <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginBottom: '22px', minHeight: '38px', lineHeight: 1.6 }}>
+                  <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '22px', minHeight: '38px', lineHeight: 1.6 }}>
                     {lang === 'hi' ? plan.tagline.hi : plan.tagline.en}
                   </p>
 

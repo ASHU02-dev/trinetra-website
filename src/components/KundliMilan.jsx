@@ -16,13 +16,13 @@ export default function KundliMilan({ lang, onBookMilan }) {
   const [girlPada, setGirlPada] = useState(2);
 
   // Mode B: Birth coordinates
-  const [bDob, setBDob] = useState('1994-08-12');
-  const [bTob, setBTob] = useState('08:45');
-  const [bCity, setBCity] = useState('New Delhi');
+  const [bDob, setBDob] = useState('');
+  const [bTob, setBTob] = useState('');
+  const [bCity, setBCity] = useState('');
 
-  const [gDob, setGDob] = useState('1996-11-20');
-  const [gTob, setGTob] = useState('14:30');
-  const [gCity, setGCity] = useState('Jaipur');
+  const [gDob, setGDob] = useState('');
+  const [gTob, setGTob] = useState('');
+  const [gCity, setGCity] = useState('');
 
   const [loading, setLoading] = useState(false);
   const [milanResult, setMilanResult] = useState(null);
@@ -211,10 +211,10 @@ export default function KundliMilan({ lang, onBookMilan }) {
                     </div>
                   </div>
                 ) : (
-                  <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr 1fr', gap: '8px' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(105px, 1fr))', gap: '8px' }}>
                     <input type="date" value={bDob} onChange={(e) => setBDob(e.target.value)} className="input-bespoke" required />
                     <input type="time" value={bTob} onChange={(e) => setBTob(e.target.value)} className="input-bespoke" required />
-                    <input type="text" placeholder="City" value={bCity} onChange={(e) => setBCity(e.target.value)} className="input-bespoke" required />
+                    <input type="text" placeholder={lang === 'hi' ? 'शहर (उदा. दिल्ली)' : 'City (e.g. Delhi)'} value={bCity} onChange={(e) => setBCity(e.target.value)} className="input-bespoke" required />
                   </div>
                 )}
               </div>
@@ -234,7 +234,7 @@ export default function KundliMilan({ lang, onBookMilan }) {
                     placeholder="e.g. Ananya" 
                     value={girlName} 
                     onChange={(e) => setGirlName(e.target.value)} 
-                    className="input-bespoke"
+                    className="input-bespoke" 
                   />
                 </div>
 
@@ -264,10 +264,10 @@ export default function KundliMilan({ lang, onBookMilan }) {
                     </div>
                   </div>
                 ) : (
-                  <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr 1fr', gap: '8px' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(105px, 1fr))', gap: '8px' }}>
                     <input type="date" value={gDob} onChange={(e) => setGDob(e.target.value)} className="input-bespoke" required />
                     <input type="time" value={gTob} onChange={(e) => setGTob(e.target.value)} className="input-bespoke" required />
-                    <input type="text" placeholder="City" value={gCity} onChange={(e) => setGCity(e.target.value)} className="input-bespoke" required />
+                    <input type="text" placeholder={lang === 'hi' ? 'शहर (उदा. जयपुर)' : 'City (e.g. Jaipur)'} value={gCity} onChange={(e) => setGCity(e.target.value)} className="input-bespoke" required />
                   </div>
                 )}
               </div>

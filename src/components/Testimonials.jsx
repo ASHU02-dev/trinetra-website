@@ -73,8 +73,9 @@ export default function Testimonials({ content, lang }) {
                     display: 'inline-block',
                     fontSize: '12px',
                     fontWeight: 700,
-                    color: 'var(--gold-light)',
-                    background: 'rgba(212,175,55,0.08)',
+                    color: 'var(--gold-primary)',
+                    background: 'var(--gold-subtle)',
+                    border: '1px solid var(--gold-border)',
                     padding: '4px 10px',
                     borderRadius: '6px',
                     marginBottom: '14px'
@@ -86,7 +87,7 @@ export default function Testimonials({ content, lang }) {
                 {/* Review Quote Text */}
                 <p 
                   style={{
-                    color: 'rgba(255, 255, 255, 0.85)',
+                    color: 'var(--text-secondary)',
                     fontSize: '14px',
                     lineHeight: 1.8,
                     fontStyle: 'italic',
@@ -103,7 +104,7 @@ export default function Testimonials({ content, lang }) {
                   display: 'flex',
                   alignItems: 'center',
                   gap: '12px',
-                  borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+                  borderTop: '1px solid var(--border-line)',
                   paddingTop: '16px'
                 }}
               >
@@ -117,17 +118,17 @@ export default function Testimonials({ content, lang }) {
                     alignItems: 'center',
                     justifyContent: 'center',
                     fontWeight: 700,
-                    color: '#FFF',
+                    color: '#FFFFFF',
                     fontSize: '15px'
                   }}
                 >
                   {rev.name.charAt(0)}
                 </div>
                 <div>
-                  <h4 style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 600 }}>
+                  <h4 style={{ fontSize: '15px', color: 'var(--text-primary)', fontWeight: 700 }}>
                     {rev.name}
                   </h4>
-                  <p style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
+                  <p style={{ fontSize: '12px', color: 'var(--text-subtle)' }}>
                     📍 {rev.location}
                   </p>
                 </div>

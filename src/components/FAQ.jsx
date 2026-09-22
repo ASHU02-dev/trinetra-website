@@ -48,7 +48,7 @@ export default function FAQ({ content, lang }) {
                     alignItems: 'center',
                     background: 'transparent',
                     border: 'none',
-                    color: '#FFFFFF',
+                    color: 'var(--text-primary)',
                     textAlign: 'left',
                     cursor: 'pointer',
                     fontSize: '16px',
@@ -56,18 +56,18 @@ export default function FAQ({ content, lang }) {
                     gap: '16px'
                   }}
                 >
-                  <span style={{ color: isOpen ? 'var(--gold-light)' : '#FFFFFF' }}>{item.q}</span>
-                  {isOpen ? <ChevronUp size={20} color="var(--gold-primary)" /> : <ChevronDown size={20} color="rgba(255,255,255,0.5)" />}
+                  <span style={{ color: isOpen ? 'var(--gold-primary)' : 'var(--text-primary)' }}>{item.q}</span>
+                  {isOpen ? <ChevronUp size={20} color="var(--gold-primary)" /> : <ChevronDown size={20} color="var(--text-subtle)" />}
                 </button>
 
                 {isOpen && (
                   <div 
                     style={{
                       padding: '0 24px 22px',
-                      color: 'var(--text-muted)',
+                      color: 'var(--text-secondary)',
                       fontSize: '14px',
                       lineHeight: 1.8,
-                      borderTop: '1px solid rgba(255,255,255,0.05)',
+                      borderTop: '1px solid var(--border-line)',
                       paddingTop: '16px'
                     }}
                   >

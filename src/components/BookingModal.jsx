@@ -69,9 +69,9 @@ export default function BookingModal({
             position: 'absolute',
             top: '20px',
             right: '20px',
-            background: 'rgba(255, 255, 255, 0.05)',
+            background: 'var(--gold-subtle)',
             border: '1px solid var(--border-line)',
-            color: '#FFFFFF',
+            color: 'var(--text-primary)',
             padding: '7px',
             borderRadius: '50%',
             cursor: 'pointer'
@@ -88,7 +88,7 @@ export default function BookingModal({
           <h3 className="font-serif text-gold-gradient" style={{ fontSize: '22px', marginTop: '6px' }}>
             {lang === 'hi' ? 'आचार्य जी से समय बुक करें' : 'Schedule Your 1-on-1 Session'}
           </h3>
-          <p style={{ fontSize: '13px', color: 'var(--text-muted)' }}>
+          <p style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>
             {lang === 'hi' 
               ? `चरण ${step} / 2: परामर्श योजना व विवरण` 
               : `Step ${step} of 2: Select consultation tier & coordinates`}
@@ -98,13 +98,13 @@ export default function BookingModal({
         {/* Step Indicator */}
         <div style={{ display: 'flex', gap: '6px', marginBottom: '22px' }}>
           <div style={{ flex: 1, height: '3px', borderRadius: '2px', background: 'var(--gold-primary)' }} />
-          <div style={{ flex: 1, height: '3px', borderRadius: '2px', background: step === 2 ? 'var(--gold-primary)' : 'rgba(255,255,255,0.08)' }} />
+          <div style={{ flex: 1, height: '3px', borderRadius: '2px', background: step === 2 ? 'var(--gold-primary)' : 'var(--border-line)' }} />
         </div>
 
         {step === 1 ? (
           <div>
             <div style={{ marginBottom: '16px' }}>
-              <label style={{ fontSize: '12px', color: 'var(--text-muted)', marginBottom: '6px', display: 'block', fontWeight: 500 }}>
+              <label style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '6px', display: 'block', fontWeight: 600 }}>
                 {lang === 'hi' ? 'परामर्श का मुख्य विषय चुनें' : 'Primary Consultation Focus'}
               </label>
               <select 
@@ -122,7 +122,7 @@ export default function BookingModal({
             </div>
 
             <div style={{ marginBottom: '22px' }}>
-              <label style={{ fontSize: '12px', color: 'var(--text-muted)', marginBottom: '6px', display: 'block', fontWeight: 500 }}>
+              <label style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '6px', display: 'block', fontWeight: 600 }}>
                 {lang === 'hi' ? 'परामर्श योजना (Tier)' : 'Select Consultation Tier'}
               </label>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -136,7 +136,7 @@ export default function BookingModal({
                         padding: '12px 16px',
                         borderRadius: '10px',
                         border: isChosen ? '1px solid var(--gold-primary)' : '1px solid var(--border-line)',
-                        background: isChosen ? 'rgba(200, 165, 91, 0.12)' : 'rgba(255,255,255,0.02)',
+                        background: isChosen ? 'var(--gold-subtle)' : 'transparent',
                         cursor: 'pointer',
                         display: 'flex',
                         justifyContent: 'space-between',
@@ -146,7 +146,7 @@ export default function BookingModal({
                     >
                       <div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                          <span style={{ fontSize: '14px', fontWeight: 700, color: isChosen ? 'var(--gold-light)' : '#FFF' }}>
+                          <span style={{ fontSize: '14px', fontWeight: 700, color: isChosen ? 'var(--gold-primary)' : 'var(--text-primary)' }}>
                             {lang === 'hi' ? p.title.hi : p.title.en}
                           </span>
                         </div>

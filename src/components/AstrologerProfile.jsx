@@ -138,10 +138,10 @@ export default function AstrologerProfile({ content, onBookClick }) {
                     {i === 0 ? <HeartHandshake size={18} /> : i === 1 ? <BookOpen size={18} /> : <ShieldCheck size={18} />}
                   </div>
                   <div>
-                    <h4 style={{ fontSize: '14px', fontWeight: 700, color: '#FFFFFF', marginBottom: '2px' }}>
+                    <h4 style={{ fontSize: '14px', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '2px' }}>
                       {pillar.title}
                     </h4>
-                    <p style={{ fontSize: '12px', color: 'var(--text-muted)', lineHeight: 1.5 }}>
+                    <p style={{ fontSize: '12px', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
                       {pillar.desc}
                     </p>
                   </div>
