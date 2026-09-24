@@ -20,8 +20,7 @@ export default function BookingModal({
     phone: '',
     dob: '',
     tob: '12:00',
-    place: '',
-    question: ''
+    place: ''
   });
 
   const selectedPlan = PLANS_DATA.find(p => p.id === selectedPlanId) || PLANS_DATA[1];
@@ -49,9 +48,8 @@ export default function BookingModal({
       `📅 Birth Coordinates: ${clientData.dob || 'Not provided'} | ${clientData.tob} | ${clientData.place || 'Not provided'}\n` +
       `🎯 Topic / Area: ${topic}\n` +
       `💎 Selected Plan: ${planTitle} (${priceText})\n` +
-      `❓ Specific Concern: ${clientData.question || 'Comprehensive birth chart review'}\n` +
       `━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-      `Acharya Ji, please confirm my appointment schedule and share session guidelines.`;
+      `Pandit Ashutosh Chamoli ji, please confirm my appointment schedule.`;
 
     const encoded = encodeURIComponent(message);
     window.open(`https://wa.me/917590077820?text=${encoded}`, '_blank');
@@ -86,7 +84,7 @@ export default function BookingModal({
             {lang === 'hi' ? 'निजी परामर्श बुकिंग' : 'PRIVATE ADVISORY'}
           </span>
           <h3 className="font-serif text-gold-gradient" style={{ fontSize: '22px', marginTop: '6px' }}>
-            {lang === 'hi' ? 'आचार्य जी से समय बुक करें' : 'Schedule Your 1-on-1 Session'}
+            {lang === 'hi' ? 'परामर्श का समय चुनें' : 'Schedule Your Consultation'}
           </h3>
           <p style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>
             {lang === 'hi' 
@@ -246,20 +244,7 @@ export default function BookingModal({
               />
             </div>
 
-            <div>
-              <label style={{ fontSize: '12px', color: 'var(--text-muted)', marginBottom: '4px', display: 'block', fontWeight: 500 }}>
-                {lang === 'hi' ? 'मुख्य प्रश्न या समस्या (वैकल्पिक)' : 'Specific Question or Focus (Optional)'}
-              </label>
-              <textarea 
-                name="question" 
-                rows="2" 
-                placeholder={lang === 'hi' ? 'अपनी समस्या संक्षेप में लिखें...' : 'Outline your concern briefly...'}
-                value={clientData.question} 
-                onChange={handleInputChange} 
-                className="input-bespoke"
-                style={{ resize: 'none' }}
-              />
-            </div>
+            <p className="consultation-limit-note">{lang === 'hi' ? `यह ${selectedPlan.duration} का समय-आधारित सेशन है। इस समय में अपने संबंधित विषय पूछें; प्रश्नों की अलग सीमा नहीं है।` : `This is a ${selectedPlan.duration} time-based session. Discuss your relevant concerns during the session; there is no per-question limit.`}</p>
 
             <div style={{ display: 'flex', gap: '10px', marginTop: '8px' }}>
               <button 
@@ -284,7 +269,7 @@ export default function BookingModal({
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', marginTop: '4px' }}>
               <ShieldCheck size={13} color="var(--gold-primary)" />
               <span style={{ fontSize: '11px', color: 'var(--text-subtle)' }}>
-                {lang === 'hi' ? '100% गोपनीय व सुरक्षित परामर्श' : 'Guaranteed 100% Confidential Private Consultation'}
+                {lang === 'hi' ? 'निजी परामर्श; आपकी जानकारी को गोपनीय रखा जाता है' : 'Private consultation; your details are handled confidentially.'}
               </span>
             </div>
           </form>

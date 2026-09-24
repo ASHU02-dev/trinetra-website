@@ -3,7 +3,7 @@ import { MessageCircle, Compass, Sparkles } from 'lucide-react';
 
 export default function MobileBottomBar({ lang, onBookClick }) {
   const handleDirectWhatsApp = () => {
-    const text = "Hello TRINETRA 🙏 I want to book a private consultation with Acharya Ji. Please guide me.";
+    const text = "Hello TRINETRA 🙏 I want to ask about a time-based consultation with Pandit Ashutosh Chamoli.";
     window.open(`https://wa.me/917590077820?text=${encodeURIComponent(text)}`, '_blank');
   };
 
@@ -47,10 +47,10 @@ export default function MobileBottomBar({ lang, onBookClick }) {
         <button
           onClick={onBookClick}
           style={{
-            background: 'linear-gradient(135deg, #7F0909 0%, #D4AF37 100%)',
-            color: '#FFFFFF',
-            border: '1px solid rgba(255, 255, 255, 0.4)',
-            borderRadius: '12px',
+            background: 'var(--gold-primary)',
+            color: '#171918',
+            border: '1px solid var(--gold-primary)',
+            borderRadius: '8px',
             padding: '12px',
             fontSize: '13px',
             fontWeight: 700,

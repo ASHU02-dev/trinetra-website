@@ -92,7 +92,7 @@ export default function KundliMilan({ lang, onBookMilan }) {
       `⚠️ Nadi Dosha: ${milanResult.nadiDosha ? (milanResult.nadiParihar ? 'Present (Cancelled / Parihar)' : 'Active') : 'No Dosha'}\n` +
       `⚠️ Bhakoot Dosha: ${milanResult.bhakootDosha ? (milanResult.bhakootParihar ? 'Present (Cancelled / Parihar)' : 'Active') : 'No Dosha'}\n` +
       `━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-      `Acharya Ji, please evaluate our marriage compatibility and guide us on wedding dates & remedies.`;
+      `Pandit Ashutosh Chamoli ji, please review our marriage compatibility and share practical guidance.`;
 
     window.open(`https://wa.me/917590077820?text=${encodeURIComponent(text)}`, '_blank');
   };
@@ -461,7 +461,7 @@ export default function KundliMilan({ lang, onBookMilan }) {
                 }}
               >
                 <h4 className="font-serif" style={{ fontSize: '15px', marginBottom: '6px' }}>
-                  {lang === 'hi' ? 'दांपत्य सुख व दोष निवारण हेतु आचार्य जी से परामर्श लें' : 'Comprehensive Marital Analysis by Acharya Ji'}
+                  {lang === 'hi' ? 'विवाह संगतता और व्यावहारिक मार्गदर्शन' : 'Marriage compatibility and practical guidance'}
                 </h4>
                 <p style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '14px' }}>
                   Gun Milan represents only 30% of marital compatibility. The 7th house strength, Jupiter, and Venus transit determine long-term harmony.

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Globe, Menu, X, Sun, Moon, Award } from 'lucide-react';
+import { Globe, Menu, X, Sun, Moon } from 'lucide-react';
 import { CURRENCIES } from '../data/currencies';
 
 export default function Navbar({ 
@@ -24,14 +24,12 @@ export default function Navbar({
   }, []);
 
   const navItems = [
-    { id: 'devbhoomi', label: lang === 'hi' ? 'सिद्ध पीठ' : 'Sanctuary', href: '#devbhoomi' },
-    { id: 'kundli', label: content.nav.kundli, href: '#kundli' },
-    { id: 'milan', label: content.nav.milan, href: '#milan' },
-    { id: 'services', label: content.nav.services, href: '#services' },
-    { id: 'horoscope', label: content.nav.horoscope, href: '#horoscope' },
-    { id: 'pricing', label: content.nav.pricing, href: '#pricing' },
-    { id: 'reviews', label: content.nav.reviews, href: '#reviews' },
-    { id: 'faq', label: content.nav.faq, href: '#faq' }
+    { id: 'home', label: 'Home', href: '#/home' },
+    { id: 'puja', label: content.nav.services, href: '#puja-havan' },
+    { id: 'kundli', label: content.nav.kundli, href: '#/kundli' },
+    { id: 'milan', label: content.nav.milan, href: '#/milan' },
+    { id: 'rashifal', label: 'Aaj ka Rashifal', href: '#/rashifal' },
+    { id: 'consultation', label: content.nav.pricing, href: '#/consultation' }
   ];
 
   return (
@@ -56,21 +54,7 @@ export default function Navbar({
           href="#" 
           style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}
         >
-          <div 
-            style={{
-              width: '38px',
-              height: '38px',
-              borderRadius: '8px',
-              background: 'linear-gradient(135deg, var(--gold-subtle) 0%, var(--bg-card) 100%)',
-              border: '1px solid var(--gold-border)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: 'var(--gold-primary)'
-            }}
-          >
-            <Award size={20} color="var(--gold-primary)" />
-          </div>
+          <img src="/images/trinetra-emblem.png" alt="" width="42" height="42" style={{ objectFit: 'contain' }} />
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
               <span className="font-serif text-gold-gradient" style={{ fontSize: '22px', fontWeight: 800, letterSpacing: '0.08em' }}>
@@ -126,11 +110,11 @@ export default function Navbar({
               gap: '6px',
               transition: 'all 0.2s'
             }}
-            title={theme === 'midnight' ? "Switch to Classical Ivory Theme" : "Switch to Midnight Sapphire Theme"}
+            title={theme === 'midnight' ? "Switch to Light Theme" : "Switch to Dark Theme"}
           >
             {theme === 'midnight' ? <Sun size={15} /> : <Moon size={15} />}
             <span className="theme-toggle-text" style={{ fontSize: '11px' }}>
-              {theme === 'midnight' ? 'Ivory Theme' : 'Midnight'}
+              {theme === 'midnight' ? 'Light' : 'Dark'}
             </span>
           </button>
 

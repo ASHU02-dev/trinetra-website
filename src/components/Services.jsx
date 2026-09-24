@@ -36,7 +36,7 @@ export default function Services({ content, onSelectService }) {
             gap: '24px'
           }}
         >
-          {content.services.items.map((service) => (
+          {content.services.items.slice(0, 3).map((service) => (
             <div 
               key={service.id} 
               className="glass-card" 

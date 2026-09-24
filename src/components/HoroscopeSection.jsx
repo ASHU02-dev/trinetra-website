@@ -13,7 +13,7 @@ export default function HoroscopeSection({ lang }) {
       `🪐 Ruler: ${selectedSign.ruler}\n` +
       `🔮 Cosmic Vibe: ${selectedSign.vibe}\n` +
       `━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-      `Acharya Ji, please provide a detailed personalized transit forecast and remedies for my chart.`;
+      `Pandit Ashutosh Chamoli ji, please provide a personalized transit reading and practical guidance.`;
     window.open(`https://wa.me/917590077820?text=${encodeURIComponent(text)}`, '_blank');
   };
 
@@ -25,15 +25,15 @@ export default function HoroscopeSection({ lang }) {
         <div className="section-header">
           <span className="badge-editorial">
             <Moon size={13} color="var(--gold-primary)" />
-            {lang === 'hi' ? 'दैनिक व मासिक गोचर' : 'COSMIC TRANSITS & HOROSCOPE'}
+            {lang === 'hi' ? 'आज का राशिफल' : 'TODAY’S RASHIFAL'}
           </span>
           <h2 className="font-serif">
-            {lang === 'hi' ? 'दैनिक राशि फल' : 'Planetary Transit Predictions'}
+            {lang === 'hi' ? 'आज का राशिफल' : 'Today’s Rashifal'}
           </h2>
           <p>
             {lang === 'hi' 
-              ? 'वर्तमान ग्रह गोचर अनुसार अपनी राशि चुनें और प्रेम, करियर व धन की स्थिति का सूक्ष्म आंकलन जानें।' 
-              : 'Select your zodiac sign to reveal current planetary transit influences on your emotional state, professional growth, and material prosperity.'}
+              ? 'अपनी राशि चुनें और आज के लिए एक सामान्य वैदिक ज्योतिषीय संकेत पढ़ें।'
+              : 'Choose your sign for a general Vedic astrology reflection for today.'}
           </p>
         </div>
 
@@ -211,7 +211,7 @@ export default function HoroscopeSection({ lang }) {
               <span>
                 {lang === 'hi' 
                   ? `${selectedSign.nameHi} राशि का व्यक्तिगत फलादेश जानें` 
-                  : `Consult Acharya for ${selectedSign.nameEn} Personalized Transit`}
+                  : `Ask Pandit Ashutosh Chamoli about ${selectedSign.nameEn}`}
               </span>
             </button>
           </div>

@@ -5,8 +5,8 @@ export default function Footer({ lang, content, onBookClick }) {
   return (
     <footer 
       style={{
-        background: 'linear-gradient(to bottom, #06070B 0%, #030406 100%)',
-        borderTop: '1px solid rgba(212, 175, 55, 0.2)',
+        background: 'var(--bg-secondary)',
+        borderTop: '1px solid var(--border-line)',
         padding: '70px 20px 100px',
         position: 'relative'
       }}
@@ -29,14 +29,14 @@ export default function Footer({ lang, content, onBookClick }) {
                   width: '36px',
                   height: '36px',
                   borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #7F0909 0%, #2A0404 100%)',
-                  border: '1px solid #D4AF37',
+                  background: 'var(--bg-card)',
+                  border: '1px solid var(--border-line)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}
               >
-                <Eye size={18} color="#F7E7A9" />
+                <Eye size={18} color="var(--gold-primary)" />
               </div>
               <span className="font-cinzel text-gold-gradient" style={{ fontSize: '22px', fontWeight: 800 }}>
                 TRINETRA
@@ -100,13 +100,11 @@ export default function Footer({ lang, content, onBookClick }) {
               {lang === 'hi' ? 'त्वरित लिंक' : 'Spiritual Portals'}
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '14px' }}>
-              <a href="#services" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>{content.nav.services}</a>
-              <a href="#kundli" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>{content.nav.kundli}</a>
-              <a href="#milan" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>{content.nav.milan}</a>
-              <a href="#horoscope" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>{content.nav.horoscope}</a>
-              <a href="#pricing" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>{content.nav.pricing}</a>
-              <a href="#reviews" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>{content.nav.reviews}</a>
-              <a href="#faq" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>{content.nav.faq}</a>
+              <a href="#/home" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>{content.nav.services}</a>
+              <a href="#/kundli" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>{content.nav.kundli}</a>
+              <a href="#/milan" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>{content.nav.milan}</a>
+              <a href="#/rashifal" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Aaj ka Rashifal</a>
+              <a href="#/consultation" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>{content.nav.pricing}</a>
             </div>
           </div>
 

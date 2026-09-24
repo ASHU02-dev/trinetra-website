@@ -3,7 +3,7 @@ export const CONTENT = {
     brand: "TRINETRA",
     tagline: "SEE BEYOND THE VISIBLE",
     nav: {
-      services: "Consultations",
+      services: "Services",
       kundli: "Free Kundli",
       milan: "Kundli Milan",
       horoscope: "Daily Rashifal",
@@ -13,10 +13,10 @@ export const CONTENT = {
       bookBtn: "Book Session"
     },
     hero: {
-      badge: "✦ ANCIENT VEDIC WISDOM • MODERN CLARITY ✦",
-      titleStart: "When Life Feels Uncertain,",
-      titleHighlight: "The Cosmos Has Answers.",
-      subtitle: "Experience authentic, compassionate 1-on-1 Vedic Astrology consultations. We decode your planetary blueprints to resolve Love conflicts, Career roadblocks, Marriage delays, and Karmic blockages.",
+      badge: "VEDIC ASTROLOGY • PRACTICAL GUIDANCE",
+      titleStart: "Clear Guidance Through",
+      titleHighlight: "Vedic Astrology",
+      subtitle: "Time-based guidance for Kundli, relationships, career and practical remedies. Puja enquiries are available across India, online and offline.",
       ctaPrimary: "Book Private Consultation",
       ctaSecondary: "Generate Free Kundli",
       stats: [
@@ -31,9 +31,9 @@ export const CONTENT = {
       cities: "New Delhi • Mumbai • Bengaluru • Dubai • London • New York • Toronto • Singapore • Sydney"
     },
     services: {
-      badge: "DIVINE SPECIALIZATIONS",
-      title: "Transformative Vedic Consultations",
-      subtitle: "Every reading is personally analyzed using classical Parashari principles, D9 Navamsha, and transit influences — no automated generic computer predictions.",
+      badge: "PROBLEM-SOLVING CONSULTATIONS",
+      title: "Guidance for the Issues on Your Mind",
+      subtitle: "Choose a focused consultation for relationships, career, or Kundli dosha and remedies.",
       items: [
         {
           id: "love",
@@ -81,12 +81,12 @@ export const CONTENT = {
     },
     astrologer: {
       badge: "THE GUIDING VOICE",
-      title: "Meet Acharya TRINETRA",
-      subtitle: "Over 15 Years of Dedicated Vedic Sadhana & Intuitive Astrology",
-      bio1: "Astrology is not about instilling fear or fatalism; it is a divine GPS gifted by the ancient Rishis to navigate through the storms of life with confidence and peace.",
-      bio2: "With rigorous training in classical Brihat Parashara Hora Shastra, Jaimini Sutras, and Lal Kitab remedies, Acharya Ji has personally guided thousands of corporate leaders, students, couples, and spiritual seekers across 35+ countries.",
+      title: "Pandit Ashutosh Chamoli",
+      subtitle: "Vedic Kundli Reading & Practical Guidance",
+      bio1: "Astrology can offer a reflective framework for understanding life choices. Consultations focus on clear explanations and practical next steps.",
+      bio2: "Maa Dhari Devi and Uttarakhand’s spiritual traditions are a personal source of inspiration. This website does not claim an official temple or institutional affiliation.",
       pillars: [
-        { title: "No Fear-Mongering", desc: "No scary predictions or unreasonable ritual demands. Only truthful, empowering, and compassionate guidance." },
+        { title: "Clear Guidance", desc: "Understand your chart and the choices in front of you." },
         { title: "Practical Solutions", desc: "Simple remedies rooted in behavioral adjustments, mantras, charity, and authentic gemstone science." },
         { title: "Strict Confidentiality", desc: "Your personal life, questions, and chart details are strictly protected under sacred silence." }
       ]
@@ -136,7 +136,7 @@ export const CONTENT = {
       items: [
         {
           q: "What if I do not know my exact birth time?",
-          a: "If you don't have an exact birth time, Acharya Ji can perform Birth Time Rectification (BTR) using past life milestones, or conduct a Prashna Kundli (Horary Astrology) based on the exact moment you ask your question."
+          a: "If your birth time is uncertain, the consultation can discuss the available chart details and their limits before offering guidance."
         },
         {
           q: "How does the private consultation take place?",
@@ -157,7 +157,7 @@ export const CONTENT = {
     brand: "त्रिनेत्र",
     tagline: "दृश्य से परे देखें",
     nav: {
-      services: "परामर्श सेवाएं",
+      services: "पूजा सेवाएं",
       kundli: "मुफ्त जन्म कुंडली",
       milan: "कुंडली मिलान",
       horoscope: "दैनिक राशिफल",
@@ -167,10 +167,10 @@ export const CONTENT = {
       bookBtn: "परामर्श बुक करें"
     },
     hero: {
-      badge: "✦ प्राचीन वैदिक ज्योतिष • आधुनिक जीवन का सटीक मार्गदर्शन ✦",
-      titleStart: "जब जीवन में राह न दिखे,",
-      titleHighlight: "तब नक्षत्र सही मार्ग दिखाते हैं।",
-      subtitle: "अनुभवी वैदिक ज्योतिषाचार्य से पाएं 100% व्यक्तिगत व गोपनीय परामर्श। प्रेम, विवाह, करियर, व्यापार में रुकावट व ग्रहों के दुष्प्रभावों का प्रामाणिक व अचूक समाधान।",
+      badge: "वैदिक ज्योतिष • व्यावहारिक मार्गदर्शन",
+      titleStart: "वैदिक ज्योतिष से",
+      titleHighlight: "स्पष्ट मार्गदर्शन",
+      subtitle: "कुंडली, रिश्तों, करियर और व्यावहारिक उपायों के लिए समय-आधारित परामर्श। पूजा की उपलब्धता पूरे भारत में ऑनलाइन और ऑफलाइन पूछें।",
       ctaPrimary: "निजी परामर्श बुक करें",
       ctaSecondary: "मुफ़्त जन्म कुंडली बनाएं",
       stats: [
@@ -186,8 +186,8 @@ export const CONTENT = {
     },
     services: {
       badge: "वैदिक विशेषज्ञताएं",
-      title: "जीवन बदलने वाली ज्योतिषीय सेवाएं",
-      subtitle: "हर कुंडली का विश्लेषण प्राचीन महर्षि पाराशर सिद्धांतों, नवांश चक्र एवं सूक्ष्म ग्रह गोचर के आधार पर आचार्य जी स्वयं करते हैं — कोई कंप्यूटर जनित सामान्य रिपोर्ट नहीं।",
+      title: "आपकी समस्या के लिए ज्योतिषीय मार्गदर्शन",
+      subtitle: "रिश्तों, करियर, कुंडली दोष और उपायों के लिए उपयुक्त परामर्श चुनें।",
       items: [
         {
           id: "love",
@@ -235,12 +235,12 @@ export const CONTENT = {
     },
     astrologer: {
       badge: "मार्गदर्शक परिचय",
-      title: "मिलिए आचार्य त्रिनेत्र से",
-      subtitle: "15 से अधिक वर्षों की वैदिक साधना व गहन ज्योतिषीय अनुभव",
-      bio1: "ज्योतिष डराने या भय फैलाने का साधन नहीं है; यह हमारे ऋषियों द्वारा दिया गया एक दिव्य मार्गदर्शन है ताकि आप जीवन के कठिन मोड़ों पर सही निर्णय ले सकें।",
-      bio2: "बृहत पाराशर होरा शास्त्र, जैमिनी ज्योतिष एवं लाल किताब के गूढ़ रहस्यों में पारंगत, आचार्य जी ने देश-विदेश में हजारों लोगों को सही दिशा दिखाई है।",
+      title: "पंडित आशुतोष चमोली",
+      subtitle: "वैदिक कुंडली पठन और व्यावहारिक मार्गदर्शन",
+      bio1: "ज्योतिष जीवन के विकल्पों को समझने का एक चिंतनशील तरीका हो सकता है। परामर्श में स्पष्ट जानकारी और व्यावहारिक अगले कदमों पर ध्यान रहता है।",
+      bio2: "माँ धारी देवी और उत्तराखंड की आध्यात्मिक परंपराएँ प्रेरणा का स्रोत हैं। यह वेबसाइट किसी मंदिर या संस्थान से आधिकारिक संबद्धता का दावा नहीं करती।",
       pillars: [
-        { title: "भयमुक्त ज्योतिष", desc: "डराने वाले उपाय या फिजूल के आडंबर नहीं। केवल सत्य, सकारात्मक और व्यवहारिक मार्गदर्शन।" },
+        { title: "स्पष्ट मार्गदर्शन", desc: "अपनी कुंडली और सामने मौजूद विकल्पों को समझें।" },
         { title: "सरल व व्यावहारिक उपाय", desc: "मंत्र साधना, आचरण सुधार, दान-पुण्य एवं वैज्ञानिक रत्न परामर्श पर आधारित समाधान।" },
         { title: "100% गोपनीयता", desc: "आपकी निजी बातें, जन्म विवरण और प्रश्न हमारे पास पूर्णतः सुरक्षित व गोपनीय रहते हैं।" }
       ]
@@ -290,7 +290,7 @@ export const CONTENT = {
       items: [
         {
           q: "यदि मुझे अपने जन्म का सही समय नहीं पता तो क्या करें?",
-          a: "यदि जन्म समय सटीक नहीं है तो आचार्य जी जीवन की पिछली प्रमुख घटनाओं के आधार पर जन्म समय शुद्धिकरण (BTR) करते हैं, अथवा प्रश्न काल के आधार पर 'प्रश्न कुंडली' बनाकर सटीक उत्तर देते हैं।"
+          a: "यदि जन्म समय निश्चित नहीं है, तो मार्गदर्शन देने से पहले उपलब्ध कुंडली विवरण और उसकी सीमाओं पर चर्चा की जा सकती है।"
         },
         {
           q: "परामर्श की प्रक्रिया कैसे होती है?",

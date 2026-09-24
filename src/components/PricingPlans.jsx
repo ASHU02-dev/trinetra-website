@@ -25,8 +25,8 @@ export default function PricingPlans({ lang, currency, setCurrency, onSelectPlan
           </h2>
           <p>
             {lang === 'hi' 
-              ? 'प्रत्येक सत्र में 100% व्यक्तिगत समय, सूक्ष्म जन्म चक्र वाचन व व्यावहारिक लाल किताब उपाय सम्मिलित हैं।' 
-              : 'Direct, focused private sessions with Acharya Ji. Choose the consultation tier that aligns with your situation.'}
+              ? 'पंडित आशुतोष चमोली के साथ निजी परामर्श। अपनी सुविधा के अनुसार सेशन की अवधि चुनें।' 
+              : 'Private consultations with Pandit Ashutosh Chamoli. Choose a session length that suits you.'}
           </p>
 
           {/* Currency Switcher */}
@@ -222,8 +222,8 @@ export default function PricingPlans({ lang, currency, setCurrency, onSelectPlan
           <Shield size={15} color="var(--gold-primary)" />
           <span>
             {lang === 'hi' 
-              ? '100% गोपनीय व व्यक्तिगत परामर्श • कोई भी प्रश्न अनुत्तरित नहीं रहता।' 
-              : '100% Sacred Confidentiality Guarantee • Individual Focus with Respect for Privacy.'}
+              ? 'निजी परामर्श; आपके विवरण गोपनीयता के साथ संभाले जाते हैं।' 
+              : 'Private consultations; personal details are handled confidentially.'}
           </span>
         </div>
 

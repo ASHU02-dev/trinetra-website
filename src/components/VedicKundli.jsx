@@ -186,7 +186,7 @@ export default function VedicKundli({ lang, onBookWithKundli }) {
       `🪐 Running Mahadasha: ${dasha} Dasha\n` +
       `⚠️ Manglik Condition: ${chartData.isManglik ? 'Manglik Yoga' : 'Clear'}\n` +
       `━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-      `Acharya Ji, please review my Vedic chart and provide direct remedies & predictions.`;
+      `Pandit Ashutosh Chamoli ji, please review my Vedic chart and share practical guidance.`;
       
     window.open(`https://wa.me/917590077820?text=${encodeURIComponent(text)}`, '_blank');
   };
@@ -732,7 +732,7 @@ export default function VedicKundli({ lang, onBookWithKundli }) {
                 <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: 1.6 }}>
                   {lang === 'hi' 
                     ? 'दशा परिवर्तन व ग्रहों के प्रभाव का सटीक समय जानकर सही निर्णय लें। WhatsApp पर सीधे आचार्य जी से संपर्क करें।' 
-                    : 'Your planetary coordinates are fully calculated. Speak directly with Acharya Ji to get remedies, transit milestones, and career/love clarity.'}
+                    : 'Your planetary coordinates are calculated. Ask Pandit Ashutosh Chamoli for guidance on your chart and next steps.'}
                 </p>
                 <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
                   <button
